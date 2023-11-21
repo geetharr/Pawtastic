@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .confirmation {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>Dog Adoption Confirmation - Thank You for Choosing Pawtastic Dogs</title>
+</head>
+<body>
+<p><strong>Subject:</strong> Dog Adoption Confirmation - Thank You for Choosing Pawtastic Dogs</p>
+<div class="confirmation">
+<p>Dear <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span></p>
+
+<p>Thank you for choosing to adopt a dog through Pawtastic Dogs! We are thrilled that you have decided to welcome a furry friend into your home.</p>
+
+<p>This email is to confirm that we have received your dog adoption application. Our team is currently reviewing your information, and we will get back to you as soon as possible.</p>
+
+<p><strong>Details you provided:</strong></p>
+<ul>
+    <li><strong>Applicant Name:</strong> <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span></li>
+    <li><strong>Contact Email:</strong> <span th:text="${entity.email}"></span></li>
+    <li><strong>Contact Phone:</strong> <span th:text="${entity.phone}"></span></li>
+</ul>
+
+<p>If you have any questions or if there's anything you'd like to add to your application, please feel free to reply to this email or contact us at <a href="mailto:pawtasticd@gmail.com">pawtasticd@gmail.com</a>.</p>
+
+<p>Once your application has been processed, we will be in touch with more information about the next steps in the adoption process.</p>
+
+<p>We appreciate your commitment to providing a loving home for a dog in need. Thank you for choosing adoption.</p>
+
+<p><strong>Best Regards,<br>
+    Pawtastic Dogs</strong></p>
+</div>
+</body>
+</html>

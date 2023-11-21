@@ -1,0 +1,506 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #fff;
+            color: #333;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #bbb 1px solid;
+        }
+
+        header a {
+            color: #888;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        header #logo {
+            text-transform: uppercase;
+            float: left;
+        }
+
+        header #logo img {
+            height: 40px;
+            width: auto;
+            float: left;
+            margin-top: 5px;
+        }
+
+        header #logo a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            float: left;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        header a:hover {
+            color: #fff;
+        }
+
+        header #menu-icon {
+            display: none;
+        }
+
+        header #menu {
+            clear: both;
+            float: right;
+            margin-top: 25px;
+        }
+
+        header #menu ul {
+            list-style: none;
+        }
+
+        header #menu ul li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #menu a {
+            text-decoration: none;
+            color: #888;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header #menu a:hover {
+            color: #fff;
+        }
+
+        header #menu ul li ul li {
+            display: none;
+            width: 150px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+
+        header #menu ul li:hover ul li {
+            display: block;
+        }
+
+        header input[type="checkbox"] {
+            display: none;
+        }
+
+        header label {
+            font-size: 40px;
+            line-height: 60px;
+            color: #fff;
+            display: none;
+            width: 100%;
+            float: right;
+            text-align: right;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        header #menu-icon {
+            width: 40px;
+            height: 40px;
+            float: right;
+            margin-top: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        header #menu-icon .navicon {
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        header #menu-icon .navicon:before {
+            content: '';
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        header #menu-icon .navicon:after {
+            content: '';
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        header #menu-btn {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header #menu-btn, header #menu {
+                display: none;
+            }
+
+            header label, header #menu-icon {
+                display: block;
+            }
+
+            header #menu {
+                clear: both;
+                float: none;
+                margin: 0;
+                padding: 0;
+                position: relative;
+            }
+
+            header #menu-icon {
+                width: 40px;
+                height: 40px;
+                float: right;
+                margin-top: 30px;
+                cursor: pointer;
+                display: block;
+            }
+
+            header #menu-icon .navicon {
+                display: none;
+            }
+
+            header #menu-btn:checked + #menu {
+                display: block;
+            }
+
+            header #menu ul {
+                float: none;
+            }
+
+            header #menu ul li {
+                width: 100%;
+                float: none;
+                display: inline;
+            }
+
+            header #menu ul li ul li {
+                width: 100%;
+                float: none;
+                display: list-item;
+                position: relative;
+            }
+        }
+
+        section {
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .main {
+            padding: 10px 0;
+        }
+
+        .main h2 {
+            color: #333;
+        }
+
+        .main p {
+            font-size: 18px;
+            line-height: 1.6em;
+            color: #666;
+        }
+
+        .main .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .main a {
+            color: #0070cc;
+        }
+
+        .main a:hover {
+            color: #036;
+        }
+
+        .main header {
+            background: #35424a;
+            color: #fff;
+        }
+
+        .main header a {
+            color: #fff;
+        }
+
+        .main header li:hover ul li {
+            display: block;
+        }
+
+        .main header #menu-icon {
+            display: none;
+        }
+
+        .main header label {
+            display: none;
+        }
+
+        .main header #menu-btn:checked + #menu {
+            display: none;
+        }
+
+        .main header #menu-btn:checked + #menu-icon {
+            display: block;
+        }
+
+        .main header #menu-btn:checked + #menu-icon .navicon {
+            display: block;
+        }
+
+        .main header #menu-btn:checked + #menu-icon .navicon:before {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .main header #menu-btn:checked + #menu-icon .navicon:after {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            bottom: 0;
+        }
+
+        .main header #menu {
+            float: none;
+            clear: both;
+            max-height: none;
+            height: auto;
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #35424a;
+        }
+
+        .main header #menu ul li ul li {
+            width: 100%;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+
+        .main header #menu ul {
+            width: 100%;
+        }
+
+        .main header #menu ul li {
+            width: 100%;
+            float: none;
+            display: inline;
+        }
+
+        .main header #menu ul li ul li {
+            width: 100%;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+
+        .main header #menu-btn:checked + #menu {
+            display: block;
+        }
+
+        .main header #menu-icon {
+            width: 40px;
+            height: 40px;
+            float: right;
+            margin-top: 30px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .main header #menu-icon .navicon {
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        .main header #menu-icon .navicon:before {
+            content: '';
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        .main header #menu-icon .navicon:after {
+            content: '';
+            background: #fff;
+            margin: 5px;
+            width: 30px;
+            height: 3px;
+            display: block;
+        }
+
+        .main header #menu-btn {
+            display: none;
+        }
+
+        .main header label {
+            font-size: 40px;
+            line-height: 60px;
+            color: #fff;
+            display: none;
+            width: 100%;
+            float: right;
+            text-align: right;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .main header .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .main header #logo {
+            text-transform: uppercase;
+            float: left;
+        }
+
+        .main header #logo img {
+            height: 40px;
+            width: auto;
+            float: left;
+            margin-top: 5px;
+        }
+
+        .main header #logo a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            float: left;
+            font-size: 2em;
+            margin-top: 10px;
+        }
+
+        .main header #menu {
+            clear: both;
+            float: right;
+            margin-top: 25px;
+        }
+
+        .main header #menu ul {
+            list-style: none;
+        }
+
+        .main header #menu ul li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        .main header #menu a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .main header #menu a:hover {
+            color: #fff;
+        }
+
+        .main header #menu ul li ul li {
+            display: none;
+            width: 150px;
+            float: none;
+            display: list-item;
+            position: relative;
+        }
+
+        .main header #menu ul li:hover ul li {
+            display: block;
+        }
+
+        .confirmation-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .confirmation-container h2 {
+            color: #333;
+        }
+
+        .confirmation-container p {
+            font-size: 18px;
+            line-height: 1.6em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="confirmation-container">
+
+
+<p><strong>Subject:</strong> Vet Appointment Confirmation </p>
+
+<p>Dear <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span>,</p>
+
+<p>Thank you for booking an appointment with our veterinary services through our online web application. We are pleased to confirm your upcoming appointment to meet with one of our experienced veterinarians.</p>
+
+<p><strong>Appointment Details:</strong></p>
+<ul>
+    <li><strong>Date:</strong> <span th:text="${entity.appointmentDate}"></span></li>
+    <li><strong>Time:</strong> <span th:text="${entity.timeSlot}"></span></li>
+    <li><strong>Pet's Name:</strong> <span th:text="${entity.petName}"></span></li>
+    <li><strong>Pet's Species/Breed:</strong> <span th:text="${entity.breed}"></span></li>
+    <li><strong>Reason for Visit:</strong> <span th:text="${entity.reasonForVisit}"></span></li>
+</ul>
+
+<p><strong>Vet Clinic Address:</strong><br>
+    839 Kingswood Path, Middletown, DE 19709</p>
+
+<p>If you need to reschedule or have any specific questions before your appointment, please don't hesitate to contact us at <a href="mailto:pawtasticd@gmail.com">pawtasticd@gmail.com</a>.</p>
+
+<p>To make the most of your visit, please bring any relevant medical records or information about your pet's health history. Our team is dedicated to providing the best possible care for your furry friend.</p>
+
+<p>We look forward to assisting you and your pet during the appointment. Thank you for choosing our veterinary services.</p>
+
+<p><strong>Best Regards,<br>
+    Pawtastic Dogs</strong></p>
+</div>
+</body>
+</html>
+

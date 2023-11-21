@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Dog Grooming Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #008080; /* Dark Teal */
+        }
+
+        a {
+            color: #0066cc; /* Blue */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        address {
+            margin-top: 20px;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+<p>Dear <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span>,</p>
+<p>Thank you for choosing Pawtastic Dogs for your dog grooming needs. We're delighted to confirm your upcoming appointment.</p>
+<p><strong>Appointment Details:</strong></p>
+<ul>
+    <li><strong>Dog Name:</strong> <span th:text="${entity.dogName}"></span></li>
+    <li><strong>Breed: </strong><span th:text="${entity.breed}"></span></li>
+    <li><strong>Service: </strong><span th:text="${entity.service}"></span></li>
+    <li><strong>Time Slot:</strong> <span th:text="${entity.timeSlot}"></span></li>
+</ul>
+<p><strong>Salon Address:</strong><br>
+    839 Kingswood Path, Middletown, DE 19709</p>
+
+<p>If you need to make any changes to your appointment or have specific requests, please contact us at <a href="mailto:pawtasticd@gmail.com">pawtasticd@gmail.com</a> at least 24 hours before your scheduled appointment.</p>
+
+<p>To ensure a smooth grooming experience, please arrive 10 minutes before your appointment and bring any relevant health records for your dog.</p>
+
+<p>We look forward to pampering your furry friend and providing top-notch grooming services. If you have any questions, feel free to reach out.</p>
+
+<p>Thank you for choosing Pawtastic Dogs. We appreciate your trust in our services.</p>
+
+<p><strong>Best Regards,<br>
+    Pawtastic Dogs</strong></p>
+</body>
+</html>

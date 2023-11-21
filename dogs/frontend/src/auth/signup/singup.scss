@@ -1,0 +1,16 @@
+.signup{
+    &--login-sec{
+        display: flex;min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #2B32B2, #1488CC);
+      }
+    &--forgot-pwd{
+        justify-content: "flex-end";
+        display: "flex";
+        align-items: "center";
+      }
+      &--form {
+        width: 100%;
+      }
+}

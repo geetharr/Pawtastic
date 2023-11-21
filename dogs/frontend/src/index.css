@@ -1,0 +1,236 @@
+body{
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.App {
+  text-align: center;
+}
+.features .img-fluid {
+  position: relative;
+  bottom: -45px;
+}
+
+.spinner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+}
+.sidebar{position: fixed;
+  left: 0;
+  width: 80px;
+  top: 0;
+  bottom: 0;
+  padding-top: 30px;
+  border-right: 1px solid rgba(0,0,0,0.5);}
+
+  .main-sec{margin-left: 80px;}
+
+.login-sec{
+  display: flex;min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #2B32B2, #1488CC);
+}
+.login-page{margin: 15px;
+  max-width: 475px; background-color: #fff;box-shadow: 5px 0 35px 0 rgba(0,0,0,.15);border-radius: 10px;
+  padding: 20px;}
+.login-page .icon{  
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.login--forgot-pwd {
+  display: flex;
+  align-items:flex-start;
+   justify-content: space-between; 
+} 
+.login--signup {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+}
+.login-links-group{
+  display: flex;
+  justify-content: space-between;
+}
+.rr{
+  border-radius: red;
+}
+
+.float-right{display: flex; justify-content: flex-end; cursor: pointer;}
+.date-picker{width: 100%; margin-top: .5rem;}
+.date-picker .MuiIconButton-root{background-color: rgba(0, 0, 0, 0.1);color: rgba(73, 69, 79, 1);}
+.login-page form{padding: 0 0;}
+.login-page .icon img{width: 14rem;border-radius: 8px;}
+.login-page {color: #1C1B1F;}
+.login-page .Mui-selected{color: #1C1B1F !important}
+.login-page .MuiTabs-scroller .MuiButtonBase-root{font-size: 14px !important;color: #49454F;}
+.login-page .forgotpswd{color: #49454F;text-decoration: underline;font-size: 14px;margin: 10px 0 30px;display: inline-block;}
+.login-page .MuiFormControl-root label{font-size: 14px !important;color: #49454F !important;}
+.main-sec{padding: 30px 40px 10px;}
+.header-sec h1{color:#000000;font-size: 28px;font-weight: 700;margin: 0;}
+.filter-toggle .MuiToggleButton-root{border-radius: 50px;color: #1D192B !important;font-size: 14px;padding: 11px 18px;border: 1px solid #79747E;}
+.filter-toggle .MuiToggleButton-root.Mui-selected{background-color:#d9d9d9 !important}
+.filter-toggle .check{display: none;font-size: 16px;}
+.filter-toggle .Mui-selected .check{display: inline-block;}
+.black-btn-outline{border-radius: 50px !important;border-color: rgba(0,0,0,0.5) !important;color: #000 !important;font-size: 14px !important;padding: 12px 28px !important;text-transform: capitalize !important;}
+.black-btn{background: linear-gradient(to right, #2B32B2, #1488CC) !important;
+  padding: 10px 10px !important;text-transform: capitalize !important;
+  font-size: 16px !important;}
+  .ml-5{
+    margin-left: 6rem;
+    margin-top: 1rem;
+    margin-right: .5rem;
+  }
+  .product-url p{position: relative;margin-bottom: 6px; padding-left: 20px;}
+  .product-url p span{position: absolute;left: 0;}
+  .adopt-dog-sec h4{font-size: 20px;line-height: 30px;font-weight: 500;color: rgba(16, 24, 40, 1);margin: 20px 0;}
+  .adopt-dog-sec p{color: #667085;font-size: 16px;margin-bottom: 0;}
+  .header .navbar-nav .nav-link{color: #000;font-weight: 600;font-size: 16px;}
+  .header.navbar .nav-link.active,.header.navbar .nav-link:hover{color: #323dc2;}
+  .home-banner-sec{background:url('./images/Homepagebanner.jpg');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: right;}
+  .home-banner-sec h1{font-family: 'Inter', sans-serif;font-weight: 800;font-size: 40px;}
+  .home-banner-sec p{font-family: 'Inter', sans-serif;font-size: 22px;font-weight: 400;margin-bottom: 0;color: rgba(255,255,255,0.7);}
+.adobt-now{background:url('./images/Adoptpagebanner.jpg');padding: 200px 0px;background-size: cover ;background-repeat: no-repeat;background-position: left;}
+.meet-vet{background:url('./images/Meetavetbannerimage.jpg');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: top;}
+.donate-sec{background:url('./images/Donatebannerimage.jpg');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: bottom;}
+.service-sec{background:url('./images/Servicesbannerimage.jpg');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: bottom;}
+.volunteer-sec{background:url('./images/Volunteerbannerimage.jpg');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: left;}
+.event-sec{background:url('./images/events-bg.png');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: bottom;}
+.pet-food-sec{background:url('./images/petfood-bg.png');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;background-position: bottom;}
+
+.banner-heading {
+  color: white; 
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.login--forgot-pwd{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+  .dedicated-team h3{font-weight: 600;font-size: 40px;line-height: 62px;letter-spacing: -2px;margin-bottom: 20px;color: #090914;}
+  .dedicated-team p{font-family: 'Poppins', sans-serif;font-size: 16px;color: #18181B;}
+
+.adobt-bg-sec{ background-color: #0F172A;padding: 110px 0px;color: #fff;}
+.adobt-bg-sec h5{font-size: 52px;line-height: 62px;font-weight: 600;letter-spacing: -2px;margin-bottom: 30px;}
+.blue-btn,.blue-btn:hover{background-color: #2563EB;color: #fff;border-radius: 50px;padding: 14px 50px;font-family: 'Poppins', sans-serif;font-size: 16px;}
+
+.quotation-sec{background-image: url('./images/home-dog3.png');padding: 200px 0px;background-size: cover;background-repeat: no-repeat;border-radius: 26px;    background-position: bottom;}
+.quotation-sec .col-12 div{background-color: rgba(15, 23, 42, 0.85);border-radius: 10px;padding: 50px;line-height: 30px;font-size: 24px;text-align: center;color: #fff;}
+
+.events-sec h5{font-size: 18px;font-weight: 600;margin: 24px 0 16px;color: #101828;}
+.events-sec p{font-size: 16px;font-weight: 400;margin: 0;color: #667085;}
+
+
+  .pl-5{
+    padding-left: 5rem;
+  }
+  .py-50{padding: 50px 0;}
+  .footer-sec{
+    /* background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(2,0,36,1) 100%); */
+    color: #fff;
+    background: #1488CC;  
+background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .team-sec{background-color: #F9FAFB;padding: 24px;text-align: center;border-radius: 5px;height: 100%;}
+  .team-sec img{margin-bottom: 20px;}
+  .team-sec h4{color: #101828;font-size: 18px;font-weight: 500;}
+  .team-sec h5{color: #6941C6;font-size: 16px;font-weight: 400;margin-bottom: 12px;}
+  .team-sec p{color: #667085;font-size: 16px;font-weight: 400;}
+
+
+  .footer-sec .container{padding:50px 15px;}
+  .footer-sec .container p{font-size: 14px;margin-bottom: 0;color: #8EC2F2;}
+  .footer-sec .container p a{color: #fff;text-decoration: none;color: #8EC2F2;}
+  .footer-sec .container h4{font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 18px;}
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  @media (min-width: 992px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1rem;
+      padding-left: 1rem;
+  }
+  }
+  @media (min-width: 1200px){
+    .events-sec .col-xl-auto{width: 20%;}
+  }
+
+  .invalid-field-error{
+    color: red;
+  }
+
+  /* .dog-breed-card{
+    cursor: pointer;
+  } */
+
+  .dog-breed-card:hover{
+    filter: brightness(100%) !important;
+  }
+  
+  .dog-breed-card-group:hover .dog-breed-card{
+    filter: brightness(75%);
+  }
+
+  .services-tile-image{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    box-shadow: 0px 0px 1px gray;
+    margin-bottom: 20px;
+  }
+
+  .services-tile-image:hover{
+    filter: brightness(100%) !important;
+  }
+
+  .services-tile-group:hover  .services-tile-image{
+    filter: brightness(75%);
+  }
+
+  .services-tile-group{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .services-tile{
+    cursor: pointer;
+  }
+
+  .dog-breed-card-image{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }

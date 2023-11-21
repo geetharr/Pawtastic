@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Training Service Confirmation - Welcome to Pawtastic Dogs Training Program</title>
+</head>
+<body>
+<p><strong>Subject:</strong> Dog Training Service Confirmation - Welcome to Pawtastic Dogs Training Program</p>
+
+<p>Dear <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span>,</p>
+
+<p>We are excited to welcome you to the Pawtastic Dogs Training Program! Thank you for choosing our dog training services to enhance the relationship between you and your furry companion.</p>
+
+<p>This email is to confirm that we have received your request for dog training services. Our team is eager to assist you in achieving your training goals and ensuring a positive experience for both you and your dog.</p>
+
+<p><strong>Details you provided:</strong></p>
+<ul>
+    <li><strong>Client Name:</strong> <span th:text="${entity.firstName}"></span><span th:text="${entity.lastName}"></span></li>
+    <li><strong>Contact Email:</strong> <span th:text="${entity.email}"></span></li>
+    <li><strong>Contact Phone:</strong> <span th:text="${entity.phone}"></span></li>
+    <li><strong>Dog's Name:</strong> <span th:text="${entity.dogName}"></span></li>
+    <li><strong>Dog's Breed:</strong> <span th:text="${entity.breed}"></span></li>
+</ul>
+
+<p>If you have any specific concerns or additional information you'd like to share about your dog's behavior, please feel free to reply to this email or contact us at <a href="mailto:pawtasticd@gmail.com">pawtasticd@gmail.com</a>.</p>
+
+<p>Our experienced trainers will be in touch shortly to discuss the training schedule and provide any necessary details to prepare for the first session.</p>
+
+<p>We look forward to helping you and your dog build a strong and lasting bond through our training services.</p>
+
+<p><strong>Best Regards,<br>
+    Pawtastic Dogs</strong></p>
+</body>
+</html>
+

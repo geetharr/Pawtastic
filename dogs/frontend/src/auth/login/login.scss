@@ -1,0 +1,27 @@
+.login{
+    &--login-sec{
+        display: flex;min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to right, #2B32B2, #1488CC);
+      }
+    &--forgot-pwd{
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+      }
+      &--login--forgot-pwd{
+        display: flex;
+        justify-content: space-around;
+      }
+      &--form {
+        width: 100%;
+      }
+      &--forgotpswd{
+        color: #49454F;
+        text-decoration: underline;
+        font-size: 14px;
+        margin: 10px 0 30px;
+        display: inline-block;
+      }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        .confirmation-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Volunteer Registration Confirmation - Welcome to Pawtastic Dogs</title>
+</head>
+
+<body>
+<div class="confirmation-container">
+<p><strong>Subject:</strong> Volunteer Registration Confirmation - Welcome to Pawtastic Dogs</p>
+
+<p>Dear <span th:text="${entity.firstName}"> </span> <span th:text="${entity.lastName}"></span></p>
+
+<p>Thank you for your commitment to making a difference in the lives of dogs through your volunteer efforts. We are thrilled to welcome you to Pawtastic Dogs!</p>
+
+<p><strong>Volunteer Registration Details:</strong></p>
+<ul>
+    <li><strong>Full Name:</strong> <span th:text="${entity.firstName}"> </span> <span th:text="${entity.lastName}"></span> </li>
+    <li><strong>Email Address:</strong> <span th:text="${entity.email}"></span></li>
+    <li><strong>Phone Number:</strong> <span th:text="${entity.volunteerContactNumber}"></span></li>
+    <li><strong>Areas of Interest:</strong><span th:text="${entity.service}"></span></li>
+</ul>
+
+<p>We appreciate your dedication to supporting our mission, and we look forward to working together to create a positive impact on the well-being of dogs in need.</p>
+
+<p>As a registered volunteer, you will receive updates and notifications about upcoming volunteer opportunities, events, and other important information. If you have any questions or if there's anything specific you would like to contribute, please feel free to reach out to us at <a href="mailto:pawtasticd@gmail.com">pawtasticd@gmail.com</a>.</p>
+
+<p>Thank you for choosing to be a part of Pawtastic Dogs. Your time and efforts are invaluable, and we are excited to have you on board.</p>
+
+<p><strong>Best Regards,<br>
+    Pawtastic Dogs</strong></p>
+</div>
+</body>
+</html>
+
