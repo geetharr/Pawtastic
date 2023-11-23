@@ -16,6 +16,13 @@ Users can fill up forms to block time for availing the services.
 Meet a Vet:
 Users can schedule an appointment to meet a Vet.
 
+# Tech Stack:
+Frontend - React JS
+Backend - Java
+Framework - Spring
+Dependency Controller - Maven
+Database - MySQL
+
 Frontend
 --------------------
 1) Download the folder.
