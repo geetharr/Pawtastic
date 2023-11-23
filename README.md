@@ -17,10 +17,10 @@ Meet a Vet:
 Users can schedule an appointment to meet a Vet.
 
 # Tech Stack:
-Frontend - React JS
-Backend - Java
-Framework - Spring
-Dependency Controller - Maven
+Frontend - React JS;
+Backend - Java;
+Framework - Spring;
+Dependency Controller - Maven;
 Database - MySQL
 
 Frontend
